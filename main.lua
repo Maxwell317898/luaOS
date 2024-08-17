@@ -7,6 +7,7 @@ local apps = {
     "ping",
     "list",
     "thomasapp",
+    "thomasmore",
 }
 
 print("enter ur password for ".. username)
@@ -31,6 +32,8 @@ function readtorunapp()
         listapps()
     elseif input == "thomasapp" then
         thomasapp.main()
+    elseif input == "thomasmore" then
+        thomasapp.evenmore()
     else
         os.execute("cls")
         print("you are not typing like a human try again")
@@ -41,7 +44,7 @@ end
 function listapps()
     os.execute("cls")
     print("listing your apps and such")
-    for count = 1, 2 do
+    for count = 1, 4 do
         print(apps[count])
     end
     print("to runn and app just type its name")
