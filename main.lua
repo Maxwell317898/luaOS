@@ -1,11 +1,11 @@
-local usrname = "admin"
-local passowrd = "admin"
+local username = "admin"
+local password = "admin"
 
 
-print("enter ur password for ".. usrname)
+print("enter ur password for ".. username)
 local input = io.read()
-if input == passowrd then
+if input == password then
     print("You are human")
-elseif input ~= passowrd then
+elseif input ~= password then
     print("You are a STUPID thing. You mean NOTHING. You should kill yourself NOW.")
 end
