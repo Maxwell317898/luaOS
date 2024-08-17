@@ -14,7 +14,10 @@ function thomasapp.main()
 end
 
 function thomasapp.evenmore()
-    
+    print("say something and i will say it twice")
+    bliblo = io.read()
+    print(bliblo .. " " .. bliblo)
+    readtorunapp()
 end
 
 return thomasapp
