@@ -21,8 +21,7 @@ function thomasapp.evenmore()
 end
 
 function thomasapp.yesandno()
-    print("do you want yes or no (you have 5 seconds to type yes or no)")
-    sleep(5)
+    print("do you want yes or no")
     local bibibi = io.read
     if bibibi == "yes" then
         print("say something and i will approve of it")
