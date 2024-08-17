@@ -1,6 +1,6 @@
 local username = "admin"
 local password = "admin"
-local state = true
+local maxapp = require("maxapps")
 local thomasapp = require("thomasapp")
 
 local apps = {
@@ -9,6 +9,7 @@ local apps = {
     "thomasapp",
     "thomasmore",
     "yes",
+    "no",
 }
 
 print("enter ur password for ".. username)
@@ -37,6 +38,8 @@ function readtorunapp()
         thomasapp.evenmore()
     elseif input == "yes" then
         thomasapp.yes()
+    elseif input == "no" then
+        thomasapp.no()
     else
         os.execute("cls")
         print("you are not typing like a human try again")
