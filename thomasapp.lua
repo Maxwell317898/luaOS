@@ -38,11 +38,10 @@ end
 
 function thomasapp.test()
     print("generating text")
-    local popo = {"a", "b"}
-    for i = 1, 6 do
-        io.write(popo[math.random(1, 2)])
+    local popo = {"a", "b", "c", "d", "e"}
+    for i = 1, 15 do
+        io.write(popo[math.random(1, 5)])
     end
-    print("you have been disagreed with")
     readtorunapp()
 end
 
