@@ -3,7 +3,8 @@ local password = "admin"
 local state = true
 
 local apps = {
-    "ping"
+    "ping",
+    "list",
 }
 
 print("enter ur password for ".. username)
@@ -34,6 +35,7 @@ function readtorunapp()
 end
 
 function listapps()
+    os.execute("cls")
     print("listing your apps and such")
     for count = 1, 1 do
         print(apps[1])
@@ -45,7 +47,5 @@ end
 
 
 
-os.execute("cls")
-listapps()
 
-
+listapps() -- defult intro to apps
