@@ -1,5 +1,6 @@
 local username = "admin"
 local password = "admin"
+local state = true
 
 local apps = {
     "ping"
@@ -23,21 +24,28 @@ function readtorunapp()
     input = io.read()
     if input == "ping" then
         ping()
+    elseif input == "list" then
+        listapps()
     else
+        os.execute("cls")
         print("you are not typing like a human try again")
         readtorunapp()
     end
 end
 
-
+function listapps()
+    print("listing your apps and such")
+    for count = 1, 1 do
+        print(apps[1])
+    end
+    print("to runn and app just type its name")
+    readtorunapp()
+end
 
 
 
 
 os.execute("cls")
-print("listing your apps and such")
-for count = 1, 1 do
-    print(apps[1])
-end
-print("to runn and app just type its name")
-readtorunapp()
+listapps()
+
+
