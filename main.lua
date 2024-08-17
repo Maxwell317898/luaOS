@@ -5,6 +5,7 @@ local state = true
 local apps = {
     "ping",
     "list",
+    "thomasapp",
 }
 
 print("enter ur password for ".. username)
@@ -37,8 +38,8 @@ end
 function listapps()
     os.execute("cls")
     print("listing your apps and such")
-    for count = 1, 1 do
-        print(apps[1])
+    for count = 1, 2 do
+        print(apps[count])
     end
     print("to runn and app just type its name")
     readtorunapp()
