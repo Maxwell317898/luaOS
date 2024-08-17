@@ -20,29 +20,34 @@ function thomasapp.evenmore()
     readtorunapp()
 end
 
-function thomasapp.yes()
-    print("say something and i will approve of it")
-    local bliblo = io.read()
-    print("yes ".. bliblo)
-    print("you have been agreed with")
-    readtorunapp()
-end
-
-function thomasapp.no()
-    print("say something and i will disapprove of it")
-    local bliblo = io.read()
-    print("no ".. bliblo)
-    print("you have been disagreed with")
-    readtorunapp()
+function thomasapp.yesandno()
+    print("do you want yes or no")
+    local bibibi = io.read
+    if bibibi == "yes" then
+        print("say something and i will approve of it")
+        local bliblo = io.read()
+        print("yes ".. bliblo)
+        print("you have been agreed with")
+        readtorunapp()
+    else
+        print("say something and i will disapprove of it")
+        local bliblo = io.read()
+        print("not ".. bliblo)
+        print("you have been disagreed with")
+        readtorunapp()
+    end
 end
 
 function thomasapp.test()
+    print("update: added 16 more symbols")
+    print("total amount of symbols: 52")
+    print("this app will generate gibberish for random characters at whatever length you want")
     print("how much gibberish do you require (put in a number)")
     local pooing = io.read()
     print("generating text")
-    local popo = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+    local popo = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "?", "!", ".", ",", ";", ":", "'", "@", "#", "~", "£", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", "_", "-", "+", "="}
     for i = 1, pooing do
-        io.write(popo[math.random(1, 26)])
+        io.write(popo[math.random(1, 52)])
     end
     io.write("\n")
     readtorunapp()
