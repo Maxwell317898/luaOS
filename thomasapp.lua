@@ -20,4 +20,12 @@ function thomasapp.evenmore()
     readtorunapp()
 end
 
+function thomasapp.yes()
+    print("say something and i will approve of it")
+    local bliblo = io.read()
+    print("yes" bliblo)
+    print("you have been agreed with")
+    readtorunapp()
+end
+
 return thomasapp
