@@ -36,4 +36,12 @@ function thomasapp.no()
     readtorunapp()
 end
 
+function thomasapp.test()
+    print("generating text")
+    local popo = {"a", "b"}
+    print(math.random(popo,#popo) .. math.random(popo,#popo) .. math.random(popo,#popo) .. math.random(popo,#popo) .. math.random(popo,#popo) .. math.random(popo,#popo))
+    print("you have been disagreed with")
+    readtorunapp()
+end
+
 return thomasapp
