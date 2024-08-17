@@ -6,7 +6,8 @@ end
 
 function thomasapp.main()
     for i = 1, 100 do
-        print("a")
+        local baba = math.random(0.000,100.000)
+        print(baba)
         sleep(0.01)
     end
     readtorunapp()
