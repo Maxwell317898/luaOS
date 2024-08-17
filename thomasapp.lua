@@ -9,6 +9,7 @@ function thomasapp.main()
         print("a")
         sleep(0.01)
     end
+    readtorunapp()
 end
 
 return thomasapp

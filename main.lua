@@ -1,6 +1,7 @@
 local username = "admin"
 local password = "admin"
 local state = true
+local thomasapp = require("thomasapp")
 
 local apps = {
     "ping",
@@ -28,6 +29,8 @@ function readtorunapp()
         ping()
     elseif input == "list" then
         listapps()
+    elseif input == "thomasapp" then
+        thomasapp.main()
     else
         os.execute("cls")
         print("you are not typing like a human try again")
