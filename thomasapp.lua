@@ -42,6 +42,7 @@ function thomasapp.test()
     for i = 1, 15 do
         io.write(popo[math.random(1, 5)])
     end
+    io.write("\n")
     readtorunapp()
 end
 
