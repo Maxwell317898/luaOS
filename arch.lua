@@ -28,8 +28,7 @@ local apps = { -- user apps
     "list",
     "thomasapp",
     "thomasmore",
-    "yes",
-    "no",
+    "yesandno",
     "thomastest",
     "binarygen",
 }
@@ -47,8 +46,7 @@ local appfuncs = {
     listapps,
     thomasapp.main,
     thomasapp.evenmore,
-    thomasapp.yes,
-    thomasapp.no,
+    thomasapp.yesandno,
     thomasapp.test,
     maxapp.randombin,
 }
