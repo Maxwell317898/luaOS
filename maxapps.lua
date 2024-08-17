@@ -6,6 +6,7 @@ function max.randombin()
     for i = 1, inp do
         print(math.random(0,1))
     end
+    readtorunapp()
 end
 
 return max
