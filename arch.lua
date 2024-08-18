@@ -32,7 +32,7 @@ local apps = { -- user apps
     "thomasapp",
     "thomasmore",
     "yesandno",
-    "thomastest",
+    "gibberish",
     "binarygen",
 }
 
