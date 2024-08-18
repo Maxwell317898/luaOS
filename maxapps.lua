@@ -10,8 +10,26 @@ function max.randombin()
     readtorunapp()
 end
 
-function max.()
+function max.appsupport(cachdata)
+    cachdata = io.read()
+    local folder = "maxappsfold/"
     
+    local fileName = folder .. tostring(math.random(1, 999999)) .. ".txt"
+    
+    local file = io.open(fileName, "w")
+    
+    if file then
+        file:write(cachdata)
+        file:close()
+        
+        print(fileName)
+        return fileName
+    else
+        print("Error: Could not open file.")
+        return nil
+    end
 end
+
+
 
 return max
