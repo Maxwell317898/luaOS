@@ -10,6 +10,7 @@ if input == password then
     print("You are human")
 else
     print("You are a STUPID thing. You mean NOTHING. You should kill yourself NOW.")
+    os.exit(1)
 end
 
 function ping() -- sudo app function 
