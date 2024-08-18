@@ -50,7 +50,7 @@ end
 function listapps()
     os.execute("cls")
     print("listing your apps and such")
-    for count = 1, 4 do
+    for count = 1, 6 do
         print(apps[count])
     end
     print("to runn and app just type its name")
