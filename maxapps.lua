@@ -1,7 +1,7 @@
 local max = {}--[[
 maxapp support can be used by other apps 
 made by maxwell317898
-apps using these the MAXAPP policy(s) must abide by afew rules
+apps using these the MAXAPP policy(s) must abide by a few rules
 list is on the github
 ]]
 function max.randombin()
@@ -62,6 +62,7 @@ function max.sudoappsuptestinteractive()
     end
     readtorunapp()
 end
+
 local SFIRreapeat = false
 function max.sudoreadfileinteractive() 
     if SFIRreapeat == false then
@@ -75,15 +76,22 @@ function max.sudoreadfileinteractive()
         print(max.appread("maxappsfold/".. input.. ".txt"))
         SFIRreapeat = true
         max.sudoreadfileinteractive()
-    elseif input == "?" then
-        print("exited SIFR to return to list do the command list")
-        readtorunapp()
-    elseif input == "???" then
-        print("SFIR - Sudo Interactive File Reader part of the MAXAPPS policy(s) up to date with Arch-line V3 and higher")
+    elseif input == nil then
+        print("SIFR command prompt for other commands: ? exit and ??? for help")
+        input = io.read()
+        if input == "?" then
+            readtorunapp()
+        elseif input == "???" then
+            print("SIFR Sudo Interactive File Reader part of the MAXAPP policy by maxwell317898 on github you will be sent back to the sifr to exit come back here and run ?")
+            sleep(1)
+            max.sudoreadfileinteractive()
+        else
+
+        end
     else
         os.execute("cls")
         SFIRreapeat = true
-        warn("SIFR only use numbers try again")
+        print("SIFR only use numbers try again")
         max.sudoreadfileinteractive()
     end
 end
