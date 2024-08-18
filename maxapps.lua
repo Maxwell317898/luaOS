@@ -1,7 +1,7 @@
 local max = {}--[[
 maxapp support can be used by other apps 
 made by maxwell317898
-
+apps using these policys
 ]]
 function max.randombin()
     print("how long u want binary for NO LETTERS")

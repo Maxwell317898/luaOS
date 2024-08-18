@@ -45,7 +45,7 @@ function thomasapp.test()
     print("total amount of symbols: 52")
     print("this app will generate gibberish for random characters at whatever length you want")
     print("how much gibberish do you require (put in a number)")
-    local pooing = io.read()
+    local pooing = tonumber(io.read())
     if type(pooing) == "number" then
         print("generating text")
         local popo = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "?", "!", ".", ",", ";", ":", "'", "@", "#", "~", "£", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", "_", "-", "+", "="}
@@ -57,6 +57,7 @@ function thomasapp.test()
         print("hope you enjoyed mimi gibberish gen :)")
     else
         print("please put in a number not a letter or symbol")
+        os.execute("cls")
         thomasapp.test()
     end
     readtorunapp()
