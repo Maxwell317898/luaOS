@@ -37,9 +37,11 @@ function thomasapp.no()
 end
 
 function thomasapp.test()
+    print("how much gibberish do you require (put in a number)")
+    local pooing = io.read()
     print("generating text")
     local popo = {"a", "b", "c", "d", "e"}
-    for i = 1, 15 do
+    for i = 1, pooing do
         io.write(popo[math.random(1, 5)])
     end
     io.write("\n")
