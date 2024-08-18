@@ -44,7 +44,7 @@ function thomasapp.test()
     print("update: added 16 more symbols")
     print("total amount of symbols: 52")
     print("this app will generate gibberish for random characters at whatever length you want")
-    print("how much gibberish do you require (put in a number) (not a letter or luaOS will CRASH)")
+    print("how much gibberish do you require (put in a number)")
     local pooing = io.read()
     if type(pooing) == "number" then
         print("generating text")
