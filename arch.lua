@@ -20,11 +20,14 @@ end
 
 local sudoapps = { -- sudoapps sudo cmdline needed
     "ping",
-    "cachtest",
+    "sasti",
+    "sifr",
+
 }
 local sudofuncs = {
     ping,
     maxapp.sudoappsuptestinteractive,
+    maxapp.sudoreadfileinteractive,
 }
 
 local apps = { -- user apps
