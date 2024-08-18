@@ -11,6 +11,7 @@ local apps = {
     "yes",
     "no",
     "thomastest",
+    "binerygen",
 }
 
 print("enter ur password for ".. username)
@@ -43,6 +44,8 @@ function readtorunapp()
         thomasapp.no()
     elseif input == "thomastest" then
         thomasapp.test()
+    elseif input == "binerygen" then
+        maxapp.randombin()
     else
         os.execute("cls")
         print("you are not typing like a human try again")
