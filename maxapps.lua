@@ -10,4 +10,8 @@ function max.randombin()
     readtorunapp()
 end
 
+function max.()
+    
+end
+
 return max
