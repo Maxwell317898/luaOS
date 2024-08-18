@@ -52,6 +52,8 @@ function thomasapp.test()
         io.write(popo[math.random(1, 52)])
     end
     io.write("\n")
+    print("here is your gibberish")
+    print("hope you enjoyed mimi gibberish gen :)")
     readtorunapp()
 end
 
