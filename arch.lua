@@ -23,7 +23,7 @@ local sudoapps = { -- sudoapps sudo cmdline needed
 }
 local sudofuncs = {
     ping,
-    maxapp.appsupport,
+    maxapp.sudoappsuptestinteractive,
 }
 
 local apps = { -- user apps
