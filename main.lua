@@ -10,6 +10,7 @@ local apps = {
     "thomasmore",
     "yes",
     "no",
+    "thomastest",
 }
 
 print("enter ur password for ".. username)
@@ -40,6 +41,8 @@ function readtorunapp()
         thomasapp.yes()
     elseif input == "no" then
         thomasapp.no()
+    elseif input == "thomastest" then
+        thomasapp.test()
     else
         os.execute("cls")
         print("you are not typing like a human try again")
