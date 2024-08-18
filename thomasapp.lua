@@ -41,7 +41,7 @@ function thomasapp.yesandno()
 end
 
 function thomasapp.test()
-    print("update: added 16 more symbols")
+    print("update: max added error handling (thanks max)")
     print("total amount of symbols: 52")
     print("this app will generate gibberish for random characters at whatever length you want")
     print("how much gibberish do you require (put in a number)")
