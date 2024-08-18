@@ -44,16 +44,20 @@ function thomasapp.test()
     print("update: added 16 more symbols")
     print("total amount of symbols: 52")
     print("this app will generate gibberish for random characters at whatever length you want")
-    print("how much gibberish do you require (put in a number)")
+    print("how much gibberish do you require (put in a number) (not a letter or luaOS will CRASH)")
     local pooing = io.read()
-    print("generating text")
-    local popo = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "?", "!", ".", ",", ";", ":", "'", "@", "#", "~", "£", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", "_", "-", "+", "="}
-    for i = 1, pooing do
-        io.write(popo[math.random(1, 52)])
+    if type(pooing) == "Number" then
+        print("generating text")
+        local popo = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "?", "!", ".", ",", ";", ":", "'", "@", "#", "~", "£", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", "_", "-", "+", "="}
+        for i = 1, pooing do
+            io.write(popo[math.random(1, 52)])
+        end
+        io.write("\n")
+        print("here is your gibberish")
+        print("hope you enjoyed mimi gibberish gen :)")
+    else
+        print("please put in a number not a letter or symbol")
     end
-    io.write("\n")
-    print("here is your gibberish")
-    print("hope you enjoyed mimi gibberish gen :)")
     readtorunapp()
 end
 
