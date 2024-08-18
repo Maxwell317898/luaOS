@@ -35,6 +35,8 @@ function thomasapp.yesandno()
         print("not ".. bliblo)
         print("you have been disagreed with")
         readtorunapp()
+    else
+        thomasapp.yesandno()
     end
 end
 
