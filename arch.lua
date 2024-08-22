@@ -19,12 +19,14 @@ end
 
 
 local sudoapps = { -- sudoapps sudo cmdline needed
+    "list",
     "ping",
     "sasti",
     "sifr",
 
 }
 local sudofuncs = {
+    listapps,
     ping,
     maxapp.sudoappsuptestinteractive,
     maxapp.sudoreadfileinteractive,
@@ -42,8 +44,14 @@ local apps = { -- user apps
 function listapps() -- list app function played on start also called with list
     os.execute("cls") -- or os.execute("clear") if on UNIX systems
     print("Listing your apps and such:")
-    for _, app in ipairs(apps) do
-        print(app)
+    if sudomode == false then
+        for _, app in ipairs(apps) do
+            print(app)
+        end
+    else
+        for _, sapp in ipairs(sudoapps) do
+            print(sapp)
+        end
     end
     print("To run an app, just type its name")
 end
