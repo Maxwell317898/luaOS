@@ -1,8 +1,11 @@
 # LuaOS an OS you can run from your terminal
 LuaOS is an operating system (kinda) it is an OS being hypervised by your terminal (sorta) it does however it is not limited to its box it can write and delete files on your computer if you want it to
-
 luaOS is able to run on any OS: Linux, MacOS and Windows
 all you need is a package manager that can get you lua
+
+> [!WARNING]
+> LuaOS is going to start using Love2d in the next update of arch line, <br>
+> releases will have a copy of love2d so you can run it. documentation will come onward from then.
 
 # instalation
 It is not that hard to install lua all you need is 5 mins
