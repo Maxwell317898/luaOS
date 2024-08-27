@@ -5,7 +5,7 @@ all you need is a package manager that can get you lua
 
 > [!WARNING]
 > LuaOS is going to start using Love2d in the next update of arch line, <br>
-> releases will have a copy of love2d so you can run it. documentation will come onward from then.
+> This version, VIS-ARCH will be using love2d engine. More docs are coming soon
 
 # instalation
 It is not that hard to install lua all you need is 5 mins
