@@ -5,9 +5,12 @@ local authed = false
 local ram = {}
 
 
-local cmdnam = {
+local cmdnam = { -- name of commands
     "list",
-    "reg",
+    "sudomode",
+}
+local sudonam = {
+    "sudolist",
 }
 
 -- ANSI escape codes for colors
@@ -39,35 +42,38 @@ function list()
     readcommand()
 end
 
-function reg() -- depracticating. to meny bugs that i cant fix
-    if ram.regreex ~= true then -- check not reexecute
-    os.execute("cls")
-    end
-    print(colors.white_bg.. "You have entered Reg editor/reader to EXIT use / exit , for more help on how to use reg edit/read just run / reghelp".. colors.reset)
-    io.write("@/ ") ram.reginput = io.read()
-    if ram.reginput == "ramdump" then
-        print("running dump:")
-        for i, cont in ipairs(ram) do
-            print(i.. ", ".. cont)
-        end        
-        print(colors.green_bg.. "done, sending you to main command line".. colors.reset)
-    elseif ram.reginput == "help" then
-        print("BEFORE YOU USE REG EDIT/READ: reg editing can damage this system not your real one but this instance, you can also use this to changesome settings")
-        print("commands: regdump : lists the whole ram")
-        ram.regreex = true
-        reg()
-    elseif ram.reginput == "exit" then
-        print("sending you to main command line")
+function sudomode()
+    if ram.sudomode ~= true then
+        ram.sudomode = true
+        print("you are now in sudomode. to list all sudo commands just run sudolist")
+        readcommand()
+    else
+        ram.sudomode = false
+        print("you have dissabled sudo-mode to list normal commands run list")
         readcommand()
     end
 end
 
 local cmdcom = {
     list,
-    reg,
+    sudomode,
+}
+
+function sudolist()
+    os.execute("cls")
+    print("here are all the SUDO commands:")
+    for _,cmdname in ipairs(sudonam) do
+        print(cmdname)
+    end
+    readcommand()
+end
+
+local sudocom = {
+    sudolist,
 }
 
 function readcommand()
+if ram.sudomode ~= true then
     print("enter a command here, to see commands just run  list")
     io.write("> ") ram.cmdinput = io.read()
     for i,cmd in ipairs(cmdnam) do
@@ -75,6 +81,15 @@ function readcommand()
             cmdcom[i]()
         end
     end
+else
+    print("SUDO: enter a commands here, to list all SUDO commands run   sudolist")
+    io.write(">> ") ram.sucmdinput = io.read()
+    for i,cmd in ipairs(sudonam) do
+        if ram.sucmdinput == cmd then
+            sudocom[i]()
+        end
+    end
+end
 end
 
 function auth() -- password and login
