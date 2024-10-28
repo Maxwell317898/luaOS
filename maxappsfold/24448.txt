@@ -1,1 +1,0 @@
-hello world of humans i can write files with lua -max
