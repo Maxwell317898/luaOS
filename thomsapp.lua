@@ -1,11 +1,12 @@
+print("what thing do you want:")
+local read = io.read()
 
-local function poopy()
+function poopy()
     for i = 1, 100 do
         print(math.random(1,100))
     end
 end
 
-local read = io.read
 if read == "poopy" then
     poopy()
 end
