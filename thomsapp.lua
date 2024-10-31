@@ -1,13 +1,14 @@
 print("what thing do you want from the list:")
-print("poopy")
+print("binary")
 local read = io.read()
 
 function binary()
     for i = 1, 100 do
-        print(math.random(0,1))
+        io.write(math.random(0,1))
     end
+    print(" here is ur binary")
 end
 
-if read == "poopy" then
+if read == "binary" then
     binary()
 end
