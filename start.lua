@@ -3,6 +3,18 @@ local startinfo = {}
 
 function linuxorwin()
     print("are you running windows or linux (UNIX) based machine")
+    print("win for windows and lin for linux ")
+
+    startinfo.winorlininput = io.read()
+
+    if startinfo.winorlininput == "win" then
+        startinfo.windows = true
+    elseif startinfo.winorlininput
+        startinfo.linux = true
+    else
+        print("enter a correct input!")
+        return linuxorwin()
+    end
 end
 
 function auth()
@@ -15,3 +27,4 @@ function auth()
 end
 auth()
 
+ 
