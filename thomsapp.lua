@@ -1,6 +1,8 @@
 
 local function poopy()
-    print(math.random(1,1000))
+    for i = 1, 100 do
+        print(math.random(1,1000))
+    end
 end
 
 poopy()
